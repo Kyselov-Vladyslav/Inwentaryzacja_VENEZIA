@@ -1,0 +1,50 @@
+@use "../base/variables" as v;
+.form {
+  @extend %mixin-card_flexbox;
+  width: 70%;
+  text-align: center;
+  &__label {
+    color: v.$text_zaglowki;
+    font-weight: 700;
+    font-size: 22px;
+    font-style: italic;
+  }
+  &__item {
+    @extend %mixin-card_elements;
+    padding: 3%;
+    width: 100%;
+    border-radius: 4px;
+    border: 2px solid v.$text_link;
+    margin: 15px;
+    font-size: 22px;
+    resize: none;
+
+    &:focus {
+      box-shadow: 0 0px 10px v.$blue;
+    }
+  }
+  .display_none {
+    display: none;
+  }
+  div {
+    @extend %mixin-card_flexbox;
+    width: 100%;
+  }
+}
+.btn {
+  padding: 10px 25px;
+  margin-bottom: 50px;
+  outline: none;
+  background-color: v.$blue;
+  border-radius: 20px;
+  border: none;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 900;
+  transition: background-color 0.1s ease-in;
+  &:hover {
+    background-color: v.$text_zaglowki;
+  }
+}
+
+

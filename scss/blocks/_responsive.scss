@@ -1,0 +1,32 @@
+// @media screen and (max-width: 1070px) {
+// }
+// @media screen and (max-width: 992px) {
+// }
+@media screen and (max-width: 767px) {
+  h1, .btn {
+    font-size: 45px;
+  }
+  h2 {
+    font-size: 35px;
+  }
+  a,p,output,h3,.flexbox h3,.container p,.nav__link, .form__label, .form__item {
+    font-size: 30px;
+  }
+  .zaglowek__img {
+    width: 5%;
+  }
+  .nav__item {
+    margin: 15px;
+    width:80%;
+    
+  }
+  .form ,
+  .zaglowek,
+  .opis,
+  .content_main,
+  .footer-width,
+  .container {
+    padding: 50px 20px 50px 20px;
+    width: 96%;
+  }
+}
