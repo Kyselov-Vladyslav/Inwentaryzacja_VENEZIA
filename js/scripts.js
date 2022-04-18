@@ -8,7 +8,7 @@ btn.addEventListener("click", btnClick);
 function btnClick() {
     if (code.value == "DELL/1/22") {
         alert("Urządzenie dodane");
-        console.log(code.value)
+        console.log(code)
         
     } else {
         alert("Brak urządzenia w bazie, wpisz swoją uwagę");
