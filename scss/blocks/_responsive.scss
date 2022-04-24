@@ -1,15 +1,41 @@
-// @media screen and (max-width: 1070px) {
-// }
-// @media screen and (max-width: 992px) {
-// }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 96%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 96%;
+  }
+}
+
 @media screen and (max-width: 767px) {
-  h1, .btn {
+  h1,
+  .btn {
     font-size: 45px;
   }
   h2 {
     font-size: 35px;
   }
-  a,p,output,h3,.flexbox h3,.container p,.nav__link, .form__label, .form__item {
+  a,
+  p,
+  output,
+  h3,
+  .flexbox h3,
+  .container p,
+  .nav__link,
+  .form__label,
+  .form__item {
     font-size: 30px;
   }
   .zaglowek__img {
@@ -17,10 +43,9 @@
   }
   .nav__item {
     margin: 15px;
-    width:80%;
-    
+    width: 80%;
   }
-  .form ,
+  .form,
   .zaglowek,
   .opis,
   .content_main,

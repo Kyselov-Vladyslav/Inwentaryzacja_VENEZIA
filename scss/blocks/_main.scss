@@ -67,7 +67,8 @@ h2 {
   }
 }
 .flexbox{
-  @extend %mixin-card_flexbox;
+  // width: 80%;
+  // @extend %mixin-card_flexbox;
   
   h3{
     color: v.$text_zaglowki;
