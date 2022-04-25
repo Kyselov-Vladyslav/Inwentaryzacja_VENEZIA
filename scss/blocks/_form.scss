@@ -1,7 +1,7 @@
 @use "../base/variables" as v;
 .form {
   @extend %mixin-card_flexbox;
-  width: 70%;
+  width: 99%;
   text-align: center;
   &__label {
     color: v.$text_zaglowki;
@@ -23,7 +23,7 @@
       box-shadow: 0 0px 10px v.$blue;
     }
   }
-  .display_none {
+  .display_none_dodane, .display_none_nie_dodane {
     display: none;
   }
   div {

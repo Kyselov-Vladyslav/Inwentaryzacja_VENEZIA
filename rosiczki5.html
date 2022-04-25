@@ -32,10 +32,65 @@
           <div class="container">
             <form class="form">
                 <label class="form__label" for="code">Zeskanuj kod</label><br>
-                <input class="form__item" type="text" id="code"><br>
-                <div class="display_none">
-                <label class="form__label" for="message">Wpisz uwagi</label><br>
-                <textarea class="form__item" id="message" cols="15" rows="5"></textarea><br>
+                <input class="form__item" type="search" autocomplete="on" spellcheck="false" role="combobox" aria-live="polite" placeholder="Wprowadź nr. urządzenia - EWIDA" aria-live="polite" id="code"><br>
+                <div class="display_none_dodane">
+                <!-- <label class="form__label" for="message">Wpisz uwagi</label><br>
+                <textarea class="form__item" id="message" cols="15" rows="5"></textarea><br> -->
+                <label class="form__label" for="message">Twoje urządzenie znaleziono, ZATWIERDŹ dla dodania. </label><br>
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Ewida</th>
+                      <th scope="col">Lokalizacja</th>
+                      <th scope="col">Numer_seryjny</th>
+                      <th scope="col">Dzial</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Sprawzone</th>
+                      <th scope="col">Uwagi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="dodawanie">
+                      <!-- <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td>
+                      <td class="dodawanie">0</td> -->
+                    </tr>
+                  </tbody>
+                </table>
+                <button type="button" class="btn">ZATWIERDŹ</button>
+                </div>
+                <div class="display_none_nie_dodane">
+                <!-- <label class="form__label" for="message">Wpisz uwagi</label><br>
+                <textarea class="form__item" id="message" cols="15" rows="5"></textarea><br> -->
+                <label class="form__label" for="message">Twoje urządzenie nie dodane, wpisz danne i ZATWIERDŹ</label><br>
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Ewida</th>
+                      <th scope="col">Lokalizacja</th>
+                      <th scope="col">Numer_seryjny</th>
+                      <th scope="col">Dzial</th>
+                      <th scope="col">Model</th>
+                      <th scope="col">Sprawzone</th>
+                      <th scope="col">Uwagi</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="dodawanie">
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                      <td><input type="text" class="dodano"></td>
+                    </tr>
+                  </tbody>
+                </table>
                 <button type="button" class="btn">ZATWIERDŹ</button>
                 </div>
             </form>
