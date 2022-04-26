@@ -18,6 +18,11 @@
     margin: 15px;
     font-size: 22px;
     resize: none;
+    outline: none;
+    appearance: auto;
+    writing-mode: horizontal-tb !important;
+    visibility: visible;
+    z-index: 2;
 
     &:focus {
       box-shadow: 0 0px 10px v.$blue;
