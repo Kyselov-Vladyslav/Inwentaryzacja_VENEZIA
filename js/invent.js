@@ -31,7 +31,7 @@ $(document).ready(function () {
     const message = document.getElementById("message");
 
     code.addEventListener("keydown", function (e) {
-      if (e.keyCode === 13) {
+      if (e.keyCode == 13) {
         e.preventDefault();
 
         let flag = true;
@@ -39,13 +39,9 @@ $(document).ready(function () {
           for (let j = 0; j < data[i].length; j++) {
             if (code.value == data[i][0]) {
               const dodac_urzadzenie = document.createElement('td');
-
               dodac_urzadzenie.textContent = `${data[i][j]}`;
-           
-
-              document
-                .querySelector(".dodawanie")
-                .appendChild(dodac_urzadzenie);
+              document.querySelector(".dodawanie").appendChild(dodac_urzadzenie);
+              // document.querySelector(".sprawdzone").appendChild(dodac_urzadzenie);
 
               flag = false;
               // alert("Urządzenie dodane");
