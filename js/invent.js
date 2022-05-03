@@ -38,21 +38,29 @@ $(document).ready(function () {
         for (let i = 0; i < data.length; i++) {
           for (let j = 0; j < data[i].length; j++) {
             if (code.value == data[i][0]) {
+
+             
+
               const dodac_urzadzenie = document.createElement('td');
               dodac_urzadzenie.textContent = `${data[i][j]}`;
-              document.querySelector(".dodawanie").appendChild(dodac_urzadzenie);
-              // document.querySelector(".sprawdzone").appendChild(dodac_urzadzenie);
+              document.querySelector('.dodawanie').appendChild(dodac_urzadzenie);
+              // localStorage.setItem('localStorageOut', JSON.stringify(`${data[i][j]}`));
+              // localStorage['localStorageOut'] = JSON.stringify(data[i][j]);
+             
+            
 
               flag = false;
               // alert("Urządzenie dodane");
               display_none_dodane.classList.remove("display_none_dodane");
               btn.addEventListener("click", btnClick);
               function btnClick() {
+                document.cookie = `${i+1}=${code.value}`;
                 location.reload();
               }
             }
           }
         }
+  
         if (flag == true) {
           alert("Brak urządzenia w bazie, wpisz swoją uwagę");
           display_none_nie_dodane.classList.remove("display_none_nie_dodane");
@@ -82,3 +90,5 @@ $(document).ready(function () {
 // p2.textContent = 'Przypisywanie w divie...';
 
 // document.querySelector('div').appendChild(p2);
+
+
