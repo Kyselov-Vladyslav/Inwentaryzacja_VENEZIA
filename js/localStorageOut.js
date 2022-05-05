@@ -14,6 +14,7 @@ $(document).ready(function () {
         if (($.cookie()[i+1]) == data[i][0]) {
           const dodac_urzadzenie = document.createElement("td");
           const dodac_tr = document.createElement("tr");
+          const br = document.createElement("br");
           dodac_tr.className = "added";
           
           dodac_urzadzenie.textContent = `${data[i][j]}`;
@@ -21,7 +22,7 @@ $(document).ready(function () {
           document.querySelector('.added').appendChild(dodac_urzadzenie);
           if (document.querySelectorAll('.added').length < 6){
 
-            // document.querySelector('.added').appendChild(dodac_urzadzenie);            
+            document.querySelector('.added').appendChild(br);            
             
           }
          
