@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Sprawdzanie urządzenia</title>
+</head>
+<body class="site-body">
+    <main>
+        <section class="zaglowek">
+          <h2>Sprawdź urządzenie</h2>
+          <div class="zaglowek__right">
+            <div class="zaglowek__item">
+              <a href="index.html">Mapa</a>
+              <img class="zaglowek__img" src="assets/icons/gonext.svg" alt=">>" />
+              <div class="zaglowek__item">
+                <a href="#"><strong>Sprawdzanie urządzenia</strong></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="flexbox">
+          <div class="container">
+            <form class="form" id="google-sheets">
+                <label class="form__label" for="code">Zeskanuj kod</label>
+                <input id="code" name="Ewida" class="form__item" autofocus="autofocus" type="text" autocomplete="off" placeholder="Wprowadź nr. urządzenia - EWIDA"><br>
+    
+                <div class="display_none_dodane">
+                <label class="form__label" for="message">Twoje urządzenie znaleziono, ZATWIERDŹ dla dodania. </label>
+                <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="th-style" scope="col">Ewida</th>
+                      <th class="th-style" scope="col">Lokalizacja</th>
+                      <th class="th-style" scope="col">Numer_seryjny</th>
+                      <th class="th-style" scope="col">Dzial</th>
+                      <th class="th-style"scope="col">Model</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="dodawanie">
+                      <tr class="lokalizacja none"></tr>
+                      <tr class="numer_seryjny none"></tr>
+                      <tr class="dzial none"></tr>
+                      <tr class="model none"></tr>
+                    </tr>
+                  </tbody>
+                </table>
+                  <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th class="th-style" scope="col">Sprawzone</th>
+                    </tr>
+                    <tr>
+                      <td class="radio-td">
+                      <input name="Sprawzone" type="radio" class="radio-style" value="#" checked>- # 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
+                    </td>
+                    </tr>
+                    <!-- <tr>
+                      <td><input name="Sprawzone" type="text" class="form__item dodano" placeholder="| # | ! | ? | #? |" value="#"></td>
+                    </tr> -->
+                    <tr>
+                      <th class="th-style" scope="col">Uwagi</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Uwagi" type="text" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                    </tr>
+                  </thead>
+                </table>
+                <button class="btn">ZATWIERDŹ</button>
+
+                <label class="form__label"># - Sprawdzone/Zmigrowane/Oklejone</label>
+                <label class="form__label">! - Sprawdzone/Oklejone/Nie zmigrowane</label>
+                <label class="form__label">? - Sprawdzone/Nieoklejone/Nie zmigrowane</label>
+                <label class="form__label">#? - Sprawdzone/Zmigrowane/Nieoklejone</label>
+                </div>
+                <div class="display_none_nie_dodane">
+                <label class="form__label" for="message">Twoje urządzenie nie dodane, wpisz danne i ZATWIERDŹ</label>
+                <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th class="th-style" scope="col">Lokalizacja</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Lokalizacja" type="text" class="form__item dodano" placeholder="Wpisz Lokalizacja"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Numer_seryjny</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Numer_seryjny" type="text" class="form__item dodano" placeholder="Wpisz Numer seryjny"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Dzial</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Dzial" type="text" class="form__item dodano" placeholder="Wpisz dział"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Model</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Model" type="text" class="form__item dodano" placeholder="Wpisz model"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Sprawzone</th>
+                    </tr>
+                    <tr>
+                      <td class="radio-td">
+                      <input name="Sprawzone" type="radio" class="radio-style" value="#">- # 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
+                    </td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Uwagi</th>
+                    </tr>
+                    <tr>
+                      <td><input name="Uwagi" type="text" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                    </tr>
+                  </thead>
+                </table>
+                <button class="btn">ZATWIERDŹ</button>
+
+                <label class="form__label"># - Sprawdzone/Zmigrowane/Oklejone</label>
+                <label class="form__label">! - Sprawdzone/Oklejone/Nie zmigrowane</label>
+                <label class="form__label">? - Sprawdzone/Nieoklejone/Nie zmigrowane</label>
+                <label class="form__label">#? - Sprawdzone/Zmigrowane/Nieoklejone</label>
+                </div>
+            </form>
+          </div>
+        </section>
+        <!-- <div class="dodaj_tu"></div> -->
+      </main>
+    <footer>
+        <div class="footer-width">
+          <div class="zaglowek__item">
+           <a href="https://www.venezia.pl/">@2022.VENEZIA|Vladyslav Kyselov</a>
+          </div>
+          <div class="zaglowek__right">
+            <div class="zaglowek__item">
+              <a href="index.html">Strona główna</a>
+              <img class="zaglowek__img" src="assets/icons/gonext.svg" alt=">>" />
+              <div class="zaglowek__item">
+                <a href="#"><strong>Sprawdzanie urządzenia</strong></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- <script src="js/scripts.js"></script> -->
+ 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
+    <!-- <script src="js/g-form.js"></script> -->
+    <script src="js/invent.js"></script>
+    
+ 
+</body>
+</html>
