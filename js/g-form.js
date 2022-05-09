@@ -1,23 +1,30 @@
-$((function () {
-      $(".form").submit(function (event) {
-        event.preventDefault();
-  
-        // Ссылка, которую получили на этапе публикации приложения
-        let appLink =
-          "https://script.google.com/macros/s/AKfycbxx19zTVHyLb7T9pHHc8hXtQc8boDHKNGGyO4bIdB8yzfjEMBBvT4iYAjwWCApHNOCnmA/exec";
-  
-        // Id текущей формы
-        let form = $("#" + $(this).attr("id"))[0];
-  
-        // FormData
-        let fd = new FormData(form);
-  
-        $.ajax({
-          url: appLink,
-          type: "POST",
-          data: fd,
-          processData: false,
-          contentType: false,
-        })
-      });
-    })(jQuery));
+$(document).ready(function () {
+  $.getJSON(
+    "https://sheets.googleapis.com/v4/spreadsheets/1QtK2Y98kBhAUA5ZQA5VGHgg13dLO7lO8mnbXmDplaXE/values/responses?alt=json&key=AIzaSyAOaLT5FKyDIEqZn9XfMkjFEkIjc1J-jjA",
+    function (elemEdded) {
+      elemEdded = elemEdded["values"];
+      // console.log(done);
+      showGoods(elemEdded);
+    }
+  );
+  function showGoods(elemEdded) {
+    for (let i = 1; i < elemEdded.length; i++) {
+      
+      let dodac_tr = document.createElement("tr");
+      dodac_tr.className = "added";
+    
+      for (let j = 0; j < elemEdded[i].length; j++) {
+
+     
+          let dodac_urzadzenie = document.createElement("td");
+          dodac_urzadzenie.innerHTML = elemEdded[i][j];
+          dodac_tr.appendChild(dodac_urzadzenie);
+     }
+     if (elemEdded[i][6] == "#"){
+      document.querySelector(".sprawdzone").appendChild(dodac_tr);
+     }else {
+      document.querySelector(".migracja").appendChild(dodac_tr);
+     }
+    }
+  }
+});
