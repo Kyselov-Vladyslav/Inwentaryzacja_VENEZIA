@@ -31,9 +31,9 @@
           <div class="container">
             <form class="form" id="google-sheets">
                 <label class="form__label" for="code">Zeskanuj kod</label>
-                <input id="code" name="Ewida" class="form__item" autofocus="autofocus" type="text" autocomplete="off" placeholder="Wprowadź nr. urządzenia - EWIDA"><br>
+                <input id="code" name="Ewida" class="form__item form-scan" autofocus="autofocus" type="text" autocomplete="off" placeholder="Wprowadź nr. urządzenia - EWIDA"><br>
     
-                <div class="display_none_dodane">
+                <div class="dodane display_none_dodane">
                 <label class="form__label" for="message">Twoje urządzenie znaleziono, ZATWIERDŹ dla dodania. </label>
                 <table class="table">
                   <thead class="thead-dark">
@@ -61,7 +61,7 @@
                     </tr>
                     <tr>
                       <td class="radio-td">
-                      <input name="Sprawzone" type="radio" class="radio-style" value="#" checked>- # 
+                      <input required name="Sprawzone" type="radio" class="radio-style" value="#" checked>- # 
                       <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
                       <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
                       <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
@@ -74,7 +74,7 @@
                       <th class="th-style" scope="col">Uwagi</th>
                     </tr>
                     <tr>
-                      <td><input name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                      <td><input required name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
                     </tr>
                   </thead>
                 </table>
@@ -85,7 +85,7 @@
                 <label class="form__label">? - Sprawdzone/Nieoklejone/Nie zmigrowane</label>
                 <label class="form__label">#? - Sprawdzone/Zmigrowane/Nieoklejone</label>
                 </div>
-                <div class="display_none_nie_dodane">
+                <div class="nie_dodane display_none_nie_dodane">
                 <label class="form__label" for="message">Twoje urządzenie nie dodane, wpisz danne i ZATWIERDŹ</label>
                 <table class="table">
                   <thead class="thead-light">
@@ -93,32 +93,32 @@
                       <th class="th-style" scope="col">Lokalizacja</th>
                     </tr>
                     <tr>
-                      <td><input name="Lokalizacja" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Lokalizacja"></td>
+                      <td><input required name="Lokalizacja" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Lokalizacja"></td>
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Numer_seryjny</th>
                     </tr>
                     <tr>
-                      <td><input name="Numer_seryjny" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Numer seryjny"></td>
+                      <td><input required name="Numer_seryjny" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Numer seryjny"></td>
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Dzial</th>
                     </tr>
                     <tr>
-                      <td><input name="Dzial" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz dział"></td>
+                      <td><input required name="Dzial" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz dział"></td>
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Model</th>
                     </tr>
                     <tr>
-                      <td><input name="Model" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz model"></td>
+                      <td><input required name="Model" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz model"></td>
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Sprawzone</th>
                     </tr>
                     <tr>
                       <td class="radio-td">
-                      <input name="Sprawzone" type="radio" class="radio-style" value="#">- # 
+                      <input required name="Sprawzone" type="radio" class="radio-style" value="#">- # 
                       <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
                       <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
                       <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
@@ -128,7 +128,7 @@
                       <th class="th-style" scope="col">Uwagi</th>
                     </tr>
                     <tr>
-                      <td><input name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                      <td><input required name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
                     </tr>
                   </thead>
                 </table>
@@ -144,6 +144,76 @@
         </section>
         <!-- <div class="dodaj_tu"></div> -->
       </main>
+
+      <div class="alert alert-test">
+        <div class="alert-flexbox-rek flexbox">
+          <div class="alert-container container">
+          <div class="alert-text">
+            <p class="p-glowny">Proszę czekać...</p>
+            <div class="g-form__preloader"></div>
+          </div>
+          </div>
+        </div>
+        </div>
+      <div class="alert alert-ok">
+        <div class="alert-flexbox-rek flexbox">
+          <div class="alert-container container">
+          <div class="alert-text">
+            <p class="p-glowny">Zmiana została zapisana!</p>
+            <p class="p-glowny">ʕ ᵔ<span class="red_text">ᴥ</span>ᵔ ʔ</p>
+            <p class="p-glowny"><a target="_blank" href="sprawdzone.html">Sprawdź co masz do migracji w Ewidzie</a></p>
+          </div>
+          <div class="center">
+            <button type="button" id="button" class="btn ok">OK</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="alert alert-brak">
+        <div class="alert-flexbox-rek flexbox">
+          <div class="alert-container container">
+          <div class="alert-text">
+            <p class="p-glowny">Brak urządzenia w ewidzie...</p>
+            <p class="p-glowny">╭[☉<span class="red_text">﹏</span>☉]╮</p>
+            <p class="p-glowny"> Dodaj nowe urządzenie</p>
+          </div>
+          <div class="center">
+            <button type="button" id="button" class="btn ok-brak">OK</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="alert alert-puste">
+        <div class="alert-flexbox-rek flexbox">
+          <div class="alert-container container">
+          <div class="alert-text">
+            <p class="p-glowny"></p>
+            <p class="p-glowny">╭[☉<span class="red_text">﹏</span>☉]╮</p>
+            <p class="p-glowny"> Pole nie może być puste!</p>
+          </div>
+          <div class="center">
+            <button type="button" id="button" class="btn ok-puste">OK</button>
+            </div>
+          </div>
+        </div>
+        </div>
+      <div class="alert alert-it">
+        <div class="alert-flexbox-rek flexbox">
+          <div class="alert-container container">
+          <div class="alert-text">
+            <p class="p-glowny">Coś nie zadziałało...</p>
+            <p class="p-glowny">╭[☉<span class="red_text">﹏</span>☉]╮</p>
+            <p class="p-glowny">Sprawdź połączenie internetowe i</p>
+            <p class="p-glowny"><span class="red_text">SPRÓBUJ PONOWNIE.</span></p>
+          </div>
+          <div class="center">
+            <button type="button" id="button" class="btn ok-it">OK</button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+
     <footer>
         <div class="footer-width">
           <div class="zaglowek__item">

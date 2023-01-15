@@ -2,6 +2,12 @@
 .table{
     width: 100%;
 }
+.table-zmigrowane{
+    display: none;
+}
+.table-migracja{
+    display: table-footer-group;
+}
 
 .dodano{
     padding: 2%;
@@ -13,3 +19,61 @@
         font-weight: 600;
     }
 }
+.urzadzenia-do-migracji{
+    margin: 20px 0px ;
+}
+.urzadzenia{
+    width: 100%;
+    padding: 0px 30px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  
+
+  .rozwin{
+    cursor: pointer;
+    display: flex;
+    font-size: 26px;
+    font-weight: 900;
+    color: v.$blue;
+  
+    transition-delay: .1s;
+    &:active{
+      color: v.$text;
+      .rozwin-svg{
+        fill: v.$text;
+        rotate: 180deg;
+        transition-delay: .1s;
+      }
+    }
+  }
+  .rozwin_active{
+    display: none;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 900;
+    color: v.$text;
+    transition-delay: .1s;
+    &:active{
+      color: v.$blue;
+      .rozwin-svg{
+        fill: v.$blue;
+        rotate: 0deg;
+        transition-delay: .1s;
+      }
+    }
+      .rozwin-svg{
+        fill: v.$text;
+        rotate: 180deg;
+    }
+  }
+  
+  .rozwin-svg{
+    margin-left: 10px;
+    width: 40px;
+    margin-top: -7px;
+    fill: v.$blue;
+    transition: rotate .1s;
+  }

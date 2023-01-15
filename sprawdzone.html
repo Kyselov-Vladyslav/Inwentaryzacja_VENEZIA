@@ -27,9 +27,14 @@
           </div>
         </div>
       </section>
+      
       <section class="flexbox">
         <div class="container">
-          <table class="table">
+      
+          <div class="urzadzenia-do-migracji">
+            <h2>Urządzenia do migracji</h2>
+          </div>
+          <table class="table ">
             <thead class="thead-dark">
               <tr>
                 <th scope="col">Data i czas</th>
@@ -42,27 +47,42 @@
                 <th scope="col">Uwagi</th>
               </tr>
             </thead>
-            <tbody class="sprawdzone">
+            <tbody class="migracja table-migracja">
               
             </tbody>
           </table>
-          <table class="table">
-            <thead class="thead-light">
-              <tr>
-                <th scope="col">Data i czas</th>
-                <th scope="col">Ewida</th>
-                <th scope="col">Lokalizacja</th>
-                <th scope="col">Numer_seryjny</th>
-                <th scope="col">Dzial</th>
-                <th scope="col">Model</th>
-                <th scope="col">Sprawzone</th>
-                <th scope="col">Uwagi</th>
-              </tr>
-            </thead>
-            <tbody class="migracja">
-              
-            </tbody>
-          </table>
+          <div class="urzadzenia">
+            <h2>Zmigrowane urządzenia</h2>
+          <div class="zaglowek__right">
+            <div class="zaglowek__item">
+  
+              <div class="rozwin">Rozwiń
+                <svg class="rozwin-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                </div>
+                <div class="rozwin_active">Zwiń
+                  <svg class="rozwin-svg" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                  </div>
+              </div>
+            </div>
+          </div>
+        
+            <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Data i czas</th>
+                  <th scope="col">Ewida</th>
+                  <th scope="col">Lokalizacja</th>
+                  <th scope="col">Numer_seryjny</th>
+                  <th scope="col">Dzial</th>
+                  <th scope="col">Model</th>
+                  <th scope="col">Sprawzone</th>
+                  <th scope="col">Uwagi</th>
+                </tr>
+              </thead>
+              <tbody class="sprawdzone table-zmigrowane" style="display: none;">
+                
+              </tbody>
+            </table>
         </div>
       </section>
     
@@ -83,8 +103,11 @@
         </div>
       </div>
     </footer>
+    
     <script src="js/jquery-3.6.0.min.js"></script>
     <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script> -->
     <script src="js/g-form.js"></script>
+    <script src="js/active.js"></script>
+    
   </body>
 </html>
