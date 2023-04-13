@@ -182,10 +182,11 @@ $(document).ready(function () {
         }
         if (flag == false) {
           display_none_nie_dodane.remove();
-          let lokalizacja_td = document.querySelectorAll(".td-on")[1];
+          let model_td = document.querySelectorAll(".td-on")[1];
           let numer_seryjny_td = document.querySelectorAll(".td-on")[2];
-          let dzial_td = document.querySelectorAll(".td-on")[3];
-          let model_td = document.querySelectorAll(".td-on")[4];
+          let lokalizacja_td = document.querySelectorAll(".td-on")[3];
+          let dzial_td = document.querySelectorAll(".td-on")[4];
+          
 
           let lokalizacja = "";
           let numer_seryjny = "";
