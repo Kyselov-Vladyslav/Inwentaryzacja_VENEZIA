@@ -31,7 +31,7 @@
           <div class="container">
             <form class="form" id="google-sheets">
                 <label class="form__label" for="code">Zeskanuj kod</label>
-                <input id="code" name="Ewida" class="form__item form-scan" autofocus="autofocus" type="text" autocomplete="off" placeholder="Wprowadź nr. urządzenia - EWIDA"><br>
+                <input id="code" name="Ewida" class="form__item form-scan" autofocus="autofocus" type="text" autocomplete="off" placeholder="Wprowadź nr. urządzenia"><br>
     
                 <div class="dodane display_none_dodane">
                 <label class="form__label" for="message">Twoje urządzenie znaleziono, ZATWIERDŹ dla dodania. </label>
@@ -39,10 +39,11 @@
                   <thead class="thead-dark">
                     <tr>
                       <th class="th-style" scope="col">Ewida</th>
-                      <th class="th-style" scope="col">Lokalizacja</th>
-                      <th class="th-style" scope="col">Numer_seryjny</th>
-                      <th class="th-style" scope="col">Dzial</th>
                       <th class="th-style"scope="col">Model</th>
+                      <th class="th-style" scope="col">Numer_seryjny</th>
+                      <th class="th-style" scope="col">Lokalizacja</th>
+                      <th class="th-style" scope="col">Dzial</th>
+                     
                     </tr>
                   </thead>
                   <tbody>
@@ -57,24 +58,37 @@
                   <table class="table">
                   <thead class="thead-dark">
                     <tr>
-                      <th class="th-style" scope="col">Sprawzone</th>
+                      <th class="th-style" scope="col">Czy artykuł został dodany do Access?</th>
                     </tr>
                     <tr>
                       <td class="radio-td">
-                      <input required name="Sprawzone" type="radio" class="radio-style" value="#" checked>- # 
-                      <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
-                      <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
-                      <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
+                      <input required name="Dodany_do_access" type="radio" class="radio-style" value="Tak">- Tak 
+                      <input name="Dodany_do_access" type="radio" class="radio-style" value="Nie" checked>- Nie 
+                      <!-- <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
+                      <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #?  -->
                     </td>
                     </tr>
                     <!-- <tr>
                       <td><input name="Sprawzone" type="text" class="form__item dodano" placeholder="| # | ! | ? | #? |" value="#"></td>
                     </tr> -->
+                  
+                    <tr>
+                      <th class="th-style" scope="col">Lokalizacja gdzie został przeniesiony *</th>
+                    </tr>
+                    <tr>
+                      <td><input required name="Lokalizacja_gdzie_znajduje" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Lokalizacje"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Dział gdzie został przeniesiony *</th>
+                    </tr>
+                    <tr>
+                      <td><input required name="Dzial_gdzie_znajduje" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz dział"></td>
+                    </tr>
                     <tr>
                       <th class="th-style" scope="col">Uwagi</th>
                     </tr>
                     <tr>
-                      <td><input required name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                      <td><input name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi"></td>
                     </tr>
                   </thead>
                 </table>
@@ -89,23 +103,12 @@
                 <label class="form__label" for="message">Twoje urządzenie nie dodane, wpisz danne i ZATWIERDŹ</label>
                 <table class="table">
                   <thead class="thead-light">
-                    <tr>
-                      <th class="th-style" scope="col">Lokalizacja</th>
-                    </tr>
-                    <tr>
-                      <td><input required name="Lokalizacja" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Lokalizacja"></td>
-                    </tr>
+                   
                     <tr>
                       <th class="th-style" scope="col">Numer_seryjny</th>
                     </tr>
                     <tr>
                       <td><input required name="Numer_seryjny" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Numer seryjny"></td>
-                    </tr>
-                    <tr>
-                      <th class="th-style" scope="col">Dzial</th>
-                    </tr>
-                    <tr>
-                      <td><input required name="Dzial" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz dział"></td>
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Model</th>
@@ -114,21 +117,34 @@
                       <td><input required name="Model" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz model"></td>
                     </tr>
                     <tr>
-                      <th class="th-style" scope="col">Sprawzone</th>
+                      <th class="th-style" scope="col">Lokalizacja</th>
+                    </tr>
+                    <tr>
+                      <td><input required name="Lokalizacja_gdzie_znajduje" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz Lokalizacja"></td>
+                    </tr>
+                    <tr>
+                      <th class="th-style" scope="col">Dzial</th>
+                    </tr>
+                    <tr>
+                      <td><input required name="Dzial_gdzie_znajduje" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz dział"></td>
+                    </tr>
+                    <!-- <tr>
+                      <th class="th-style" scope="col">Czy artykuł został dodany do Access?</th>
                     </tr>
                     <tr>
                       <td class="radio-td">
-                      <input required name="Sprawzone" type="radio" class="radio-style" value="#">- # 
-                      <input name="Sprawzone" type="radio" class="radio-style" value="!">- ! 
+                        <input required name="Dodany_do_access" type="radio" class="radio-style" value="Tak">- Tak 
+                        <input name="Dodany_do_access" type="radio" class="radio-style" value="Nie">- Nie 
                       <input name="Sprawzone" type="radio" class="radio-style" value="?">- ? 
                       <input name="Sprawzone" type="radio" class="radio-style" value="#?">- #? 
-                    </td>
+                    </td> -->
+                    <input name="Dodany_do_access" class="radio-style none" value="Nie">
                     </tr>
                     <tr>
                       <th class="th-style" scope="col">Uwagi</th>
                     </tr>
                     <tr>
-                      <td><input required name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
+                      <td><input name="Uwagi" type="text" autocomplete="off" class="form__item dodano" placeholder="Wpisz uwagi / Dział"></td>
                     </tr>
                   </thead>
                 </table>
@@ -161,7 +177,7 @@
           <div class="alert-text">
             <p class="p-glowny">Zmiana została zapisana!</p>
             <p class="p-glowny">ʕ ᵔ<span class="red_text">ᴥ</span>ᵔ ʔ</p>
-            <p class="p-glowny"><a target="_blank" href="sprawdzone.html">Sprawdź co masz do migracji w Ewidzie</a></p>
+            <p class="p-glowny"><a target="_blank" href="sprawdzone.html">Sprawdź co masz do migracji w Accessie</a></p>
           </div>
           <div class="center">
             <button type="button" id="button" class="btn ok">OK</button>
@@ -173,7 +189,7 @@
         <div class="alert-flexbox-rek flexbox">
           <div class="alert-container container">
           <div class="alert-text">
-            <p class="p-glowny">Brak urządzenia w ewidzie...</p>
+            <p class="p-glowny">Brak urządzenia w Accessie...</p>
             <p class="p-glowny">╭[☉<span class="red_text">﹏</span>☉]╮</p>
             <p class="p-glowny"> Dodaj nowe urządzenie</p>
           </div>
@@ -212,12 +228,10 @@
           </div>
         </div>
         </div>
-
-
     <footer>
         <div class="footer-width">
           <div class="zaglowek__item">
-           <a href="https://www.venezia.pl/">@2022.VENEZIA|Vladyslav Kyselov</a>
+           <a href="https://www.venezia.pl/">@2022.Artimod|Vladyslav Kyselov</a>
           </div>
           <div class="zaglowek__right">
             <div class="zaglowek__item">

@@ -191,9 +191,9 @@ $(document).ready(function () {
           let numer_seryjny = "";
           let dzial = "";
           let model = "";
-          lokalizacja += `<input name="Lokalizacja" value="${lokalizacja_td.textContent}">`;
+          lokalizacja += `<input name="Lokalizacja_gdzie_było" value="${lokalizacja_td.textContent}">`;
           numer_seryjny += `<input name="Numer_seryjny" value="${numer_seryjny_td.textContent}">`;
-          dzial += `<input name="Dzial" value="${dzial_td.textContent}">`;
+          dzial += `<input name="Dzial_gdzie_było" value="${dzial_td.textContent}">`;
           model += `<input name="Model" value="${model_td.textContent}">`;
           $(".lokalizacja").html(lokalizacja);
           $(".numer_seryjny").html(numer_seryjny);
