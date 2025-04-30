@@ -1,12 +1,13 @@
-
-*{
-    box-sizing: border-box;
-
+* {
+  box-sizing: border-box;
 }
 
-body{
-    min-width: 100ch;
-    background-color: hsl(0, 0%, 97%);
-    font-family: 'Roboto', sans-serif;
+body {
+  min-width: 100ch;
+  background-color: hsl(0, 0%, 97%);
+  font-family: "Roboto", sans-serif;
 }
 
+.uc {
+  text-transform: uppercase;
+}

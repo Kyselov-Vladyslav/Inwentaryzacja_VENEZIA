@@ -87,6 +87,15 @@
     width: 70%;
     margin: 0;
 }
+.alert-flexbox-history{
+    width: 100%;
+}
+.container-history {
+    width: 100%;
+    @extend %mixin-card;
+    @extend %mixin-card_flexbox;
+    padding: 20px 0 20px 0;
+  }
 .alert-container{
     align-items: center;
     justify-content: center;
@@ -94,6 +103,15 @@
     .pomoc_img {
         padding-left: 5px;
         width: 60%;
+    }
+}
+.alert-container-history{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    .pomoc_img {
+        padding-left: 5px;
+        width: 100%;
     }
 }
 .alert-text{

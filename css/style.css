@@ -54,7 +54,7 @@ footer, header {
   background-color: #ffffff;
 }
 
-.container, .zaglowek {
+.container-history, .container, .zaglowek {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.18);
   border-radius: 6px;
   background-color: #ffffff;
@@ -66,7 +66,7 @@ footer, header {
   background-color: inherit;
 }
 
-.form, .form div, .container {
+.container-history, .form, .form div, .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,8 +79,12 @@ footer, header {
 
 body {
   min-width: 100ch;
-  background-color: #f7f7f7;
+  background-color: hsl(0, 0%, 97%);
   font-family: "Roboto", sans-serif;
+}
+
+.uc {
+  text-transform: uppercase;
 }
 
 header {
@@ -213,12 +217,12 @@ h2 {
 }
 .form__item {
   text-align: center;
-  padding: 3%;
+  padding: 2%;
   width: 100%;
   border-radius: 4px;
   border: 2px solid #b8b8b8;
   margin-bottom: 15px;
-  font-size: 24px;
+  font-size: 18px;
 }
 .form__item:focus {
   box-shadow: 0 0px 10px #1875f0;
@@ -230,7 +234,7 @@ h2 {
   display: none;
 }
 .form .th-style {
-  font-size: 30px;
+  font-size: 16px;
   font-weight: 900;
 }
 .form .radio-td {
@@ -239,12 +243,12 @@ h2 {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: 40px;
+  font-size: 18px;
   font-weight: 900;
 }
 .form .radio-style {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -256,7 +260,7 @@ h2 {
   top: 4px;
 }
 .form .radio-style:checked {
-  border: 30px solid black;
+  border: 20px solid black;
 }
 .form div {
   width: 100%;
@@ -278,6 +282,10 @@ h2 {
   background-color: #666666;
 }
 
+.btn-history {
+  font-size: 16px;
+}
+
 .table {
   width: 100%;
 }
@@ -295,7 +303,7 @@ h2 {
 }
 
 .dodawanie td {
-  font-size: 25px;
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -356,6 +364,14 @@ h2 {
   margin-top: -7px;
   fill: #1875f0;
   transition: rotate 0.1s;
+}
+
+.container-sprawdzone {
+  padding: 10px;
+}
+
+.added {
+  font-size: 12px;
 }
 
 .g-form__preloader {
@@ -453,6 +469,15 @@ h2 {
   margin: 0;
 }
 
+.alert-flexbox-history {
+  width: 100%;
+}
+
+.container-history {
+  width: 100%;
+  padding: 20px 0 20px 0;
+}
+
 .alert-container {
   align-items: center;
   justify-content: center;
@@ -461,6 +486,16 @@ h2 {
 .alert-container .pomoc_img {
   padding-left: 5px;
   width: 60%;
+}
+
+.alert-container-history {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.alert-container-history .pomoc_img {
+  padding-left: 5px;
+  width: 100%;
 }
 
 .alert-text {
@@ -538,56 +573,47 @@ footer {
   .alert .p-glowny, a {
     font-size: 40px;
   }
-
   h1 {
     font-size: 45px;
   }
-
   .btn {
     margin-top: 100px;
     font-size: 60px;
     padding: 20px 70px;
   }
-
   h2 {
     font-size: 35px;
   }
-
   a,
-p,
-output,
-h3,
-.flexbox h3,
-.container p,
-.nav__link,
-.form__label,
-.form__item {
+  p,
+  output,
+  h3,
+  .flexbox h3,
+  .container p,
+  .nav__link,
+  .form__label,
+  .form__item {
     font-size: 30px;
   }
-
   .form__item {
     padding: 5%;
   }
-
   .dodano {
     padding: 4%;
   }
-
   .zaglowek__img {
     width: 5%;
   }
-
   .nav__item {
     margin: 15px;
     width: 80%;
   }
-
   .form,
-.zaglowek,
-.opis,
-.content_main,
-.footer-width,
-.container {
+  .zaglowek,
+  .opis,
+  .content_main,
+  .footer-width,
+  .container {
     padding: 50px 2px 50px 2px;
     width: 98%;
   }

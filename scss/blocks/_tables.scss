@@ -15,7 +15,7 @@
 
 .dodawanie{
     & td{
-        font-size: 25px;
+        font-size: 14px;
         font-weight: 600;
     }
 }
@@ -76,4 +76,10 @@
     margin-top: -7px;
     fill: v.$blue;
     transition: rotate .1s;
+  }
+.container-sprawdzone{
+  padding: 10px;
+}
+  .added{
+    font-size: 12px;
   }
